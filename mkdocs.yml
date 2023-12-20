@@ -19,7 +19,7 @@ nav:
     - API: examples/I_api.md
   - Documentation:
     - User and Theory Guides: guides/A_user_and_theory_guides.md
-    - Learning Material: guides/B_training_materials_and_tutorials.md
+    - Learning Material: guides/B_tutorials_and_online_training.md
     - API Manuals: guides/C_api_manuals.md
 
   - Contribute: contributions.md
