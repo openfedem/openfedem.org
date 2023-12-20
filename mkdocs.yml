@@ -1,0 +1,57 @@
+site_name: OpenFEDEM
+site_url: https://openfedem.org/
+
+# TODO: legg inn hvordan linux support etc
+
+nav:
+  - Home:  index.md
+  - How to: how_to_get_started.md
+  - Examples:
+    - Introduction: examples/0_introduction.md
+    - Simple: examples/A_simple.md
+    - Advanced: examples/B_advanced.md
+    - Model imports: examples/C_imports.md
+    - Industrial applications: examples/D_industrial_applications.md
+    - Simulators: examples/E_simulators.md
+    - Digital Twins: examples/F_digital_twins.md
+    - Benchmarks: examples/G_case_studies.md
+    - Physics cases: examples/H_physics.md
+    - API: examples/I_api.md
+  - Documentation:
+    - User and Theory Guides: guides/A_user_and_theory_guides.md
+    - Learning Material: guides/B_training_materials_and_tutorials.md
+    - API Manuals: guides/C_api_manuals.md
+
+  - Contribute: contributions.md
+  - Community: community.md
+  - About: about.md
+
+theme:
+  logo: images/logo.png
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+
+extra_css:
+    - css/custom.css

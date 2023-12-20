@@ -1,0 +1,11 @@
+/temporary_frontpage/
+/.idea/
+/site/
+/ZZZ/**
+/docs/tutorials/**
+/docs/public_models/**
+/docs/restricted_models/**
+/docs/private_models/**
+/src/realization.md
+/src/template.md
+/src/template1.md

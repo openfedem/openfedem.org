@@ -1,0 +1,16 @@
+h1, h2, h3 {
+    color: #fab018; /* Darker blue for headings */
+}
+
+.md-header, .md-tabs {
+    background-color: #868686; /* Replace with your desired color */
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
