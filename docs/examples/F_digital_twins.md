@@ -23,7 +23,7 @@ graph LR
 ```
 
 
-## Load driven Digital Twin [download...](loader%2Floader_modeling_and_solving.py)
+## Load driven Digital Twin
 Kjøring av digitale tvilling med minimal fedempy avtrykk
 ```python
 """
@@ -120,7 +120,7 @@ my_solver.solver_close()
 my_solver.close_model(False)
 ```
 
-## Response driven Digital Twin [download...](loader%2Floader_model.yaml)
+## Response driven Digital Twin
 ```yaml
 target_file: 02-loader-y100.fmm
 file_exists: OVERWRITE!
