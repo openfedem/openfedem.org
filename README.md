@@ -1,7 +1,7 @@
-OpenFEDEM Homepage
-==================
+OpenFEDEM Website
+=================
 
-Welcome to the repository for the OpenFEDEM homepage.
+Welcome to the repository for the OpenFEDEM Website.
 This repository contains the source files (Markdown) and content for the [OpenFEDEM website](https://www.openfedem.org).
 
 ## Introduction
