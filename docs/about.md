@@ -3,25 +3,31 @@
 
 ## The Team
 
-| Name/contact                                                                         | Role          | 
-|:-----------------------------------------------------------------------|:--------------|
-| [Oeystein Stranden @ OpenFEDEM](mailto:oeystein@openfedem.org)         | Product Owner |
-| [ Knut Morten Okstad @ OpenFEDEM](mailto:kmo@openfedem.org)            | Maintainer    |
-|[Runar H Refsnaes @ OpenFEDEM](mailto:runar@openfedem.org)             | Maintainer    |
-|[Guenter Glanzer @ OpenFEDEM](mailto:gglanzer@openfedem.org)           | Maintainer    |
-|[Terje Roelvaag @ NTNU](mailto:terje.rolvag@ntnu.no)                   | Contributor   |
-| [Bjoern Haugen @ NTNU](mailto:bjorn.haugen@ntnu.no)                    | Contributor   |
-| [Kristian Saetertroe @ SAP](mailto:kristian.satertro@sap.com)          | Contributor   |
-| [Jon Toendevoldshagen @ OpenFEDEM](mailto:jon.tondevoldshagen@sap.com) | Contributor   |
+| Name/contact                                                            | Role          | 
+|:------------------------------------------------------------------------|:--------------|
+| [Oeystein Stranden @ OpenFEDEM](mailto:oeystein@openfedem.org)          | Product Owner |
+| [ Knut Morten Okstad @ OpenFEDEM](mailto:kmo@openfedem.org)             | Maintainer    |
+| [Runar H Refsnaes @ OpenFEDEM](mailto:runar@openfedem.org)              | Maintainer    |
+| [Guenter Glanzer @ OpenFEDEM](mailto:gglanzer@openfedem.org)            | Maintainer    |
+| [Terje Roelvaag @ NTNU](mailto:terje.rolvag@ntnu.no)                    | Contributor   |
+| [Bjoern Haugen @ NTNU](mailto:bjorn.haugen@ntnu.no)                     | Contributor   |  
+| [Kristian Saetertroe @ SAP](mailto:kristian.satertro@sap.com)           | Contributor   |
+| [Jon Toendevoldshagen @ OpenFEDEM](mailto:jon.tondevoldshagen@sap.com)  | Contributor   |
+
+
+## History
+Background and evolution of the software. _To be continued..._
+
+## Licensing and Usage
+The software is licenced under `Apache License 2.0`, for more information visit the 
+[FEDEM Solvers license](https://github.com/SAP/fedem-solvers/blob/main/LICENSE) and
+[FEDEM GUI License](https://github.com/SAP/fedem-gui/blob/main/LICENSE) descriptions.
+
+
 
 
 
 <!
-## History
-Background and evolution of the software.
-
-## Licensing and Usage
-License details and usage rights.
 
 
 
