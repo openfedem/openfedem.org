@@ -2,5 +2,5 @@
 
 # API Manuals
 
- * [Python API](https://openfedem.org/PythonAPI/)
+ * [Python API](https://openfedem.org/fedempy/)
  * [_[Deprecated]_ ComAPI.chm](..%2Ffedem_docs%2FComAPI.chm)
