@@ -1,7 +1,7 @@
-OpenFEDEM Homepage
-==================
+OpenFEDEM Website
+=================
 
-Welcome to the repository for the OpenFEDEM homepage.
+Welcome to the repository for the OpenFEDEM Website.
 This repository contains the source files (Markdown) and content for the [OpenFEDEM website](https://www.openfedem.org).
 
 ## Introduction
@@ -78,7 +78,7 @@ Visit `one.com`'s user guide for more information.
 
 ## Contact
 
-For questions or suggestions regarding OpenFEDEM, please contact _TBN_.
+For questions or suggestions regarding OpenFEDEM, please contact the `Product Owner` or a `Maintainer` listed [here](https://openfedem.org/about/).
 
 ---
 
