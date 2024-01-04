@@ -16,10 +16,10 @@ The model is activated with a time dependent function for the spring elongation.
 
 The model is loaded by increasing the mass in the bucket.
 
+<!
 ## Improved cylinder models
 Beam elements are used to model the cylinders, improving the mass distribution and the stiffness of the cylinders.
 
-<!
 ## Case 3: Improved load model, using mass elements
 ## Case 4: Improved cylinder control, using PID controller
 >

@@ -9,7 +9,7 @@ with shortened turnaround times and quick access to simulation results for a cle
 behavior of the model. Fedem also provides intuitive and high-performing post-processing capabilities, including 
 full stress analysis, eigenmode solutions, strain gage solutions and fatigue analysis for selected time steps.
 
-![User Interface](images/user_interface.png)
+![User Interface](images/user_interface_2.png)
 
 <!
 ## Core Features

@@ -11,7 +11,7 @@ Tutorial and model download:
 * [sla_suspension-tutorial.pdf](linked_files/sla_suspension-tutorial.pdf)
 * [sla_suspension-model.zip](linked_files/sla_suspension-model.zip)
 
-
+<!
 ### Scissor lift
 
 ![scissor_lift-image.png](linked_files%2Fscissor_lift-image.png)
@@ -61,9 +61,16 @@ Tutorial and model download:
 
 * [buoyant_cylinder-tutorial.pdf](linked_files%2Fbuoyant_cylinder-tutorial.pdf)
 * [buoyant_cylinder-model.zip](linked_files%2Fbuoyant_cylinder-model.zip)
-
+>
 
 ## Online training - Youtube
+![Terje Roelvaag Youtube channel .png](../images/tr_youtube.png)
+<a href="https://www.youtube.com/@FedemDigitalTwins" target="_blank">
+    <img src="path_to_your_thumbnail_image.jpg" alt="Visit our YouTube channel">
+</a>
+
+
+
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mQINwJbqjOM?si=8V6D8SY1u8QhylSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

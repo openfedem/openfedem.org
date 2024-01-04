@@ -1,8 +1,6 @@
 site_name: OpenFEDEM
 site_url: https://openfedem.org/
 
-# TODO: legg inn hvordan linux support etc
-
 nav:
   - Home:  index.md
   - How to: how_to_get_started.md
@@ -12,11 +10,11 @@ nav:
     #- Simple: examples/A_simple.md
     #- Advanced: examples/B_advanced.md
     #- Model imports: examples/C_imports.md
-    - Industrial applications: examples/D_industrial_applications.md
-    - Simulators: examples/E_simulators.md
-    - Digital Twins: examples/F_digital_twins.md
-    - Benchmarks: examples/G_case_studies.md
-    - Physics cases: examples/H_physics.md
+    #- Industrial applications: examples/D_industrial_applications.md
+    #- Simulators: examples/E_simulators.md
+    #- Digital Twins: examples/F_digital_twins.md
+    #- Benchmarks: examples/G_case_studies.md
+    #- Physics cases: examples/H_physics.md
     #- API: examples/I_api.md
   - Documentation:
     - User and Theory Guides: guides/A_user_and_theory_guides.md
