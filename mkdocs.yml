@@ -3,7 +3,11 @@ site_url: https://openfedem.org/
 
 nav:
   - Home:  index.md
-  - How to: how_to_get_started.md
+  - How to:
+    - How to:  how_to_get_started.md
+    - Downloads:
+      - Installer:   https://github.com/SAP/fedem-gui/releases/download/fedem-8.0.0/FedemInstaller-R8.0.0.zip
+      - fedempy: https://github.com/SAP/fedem-solvers/releases/download/fedem-8.0.0/fedempy-3.0.2.tar.gz
   - Examples:
     - Introduction: examples/0_introduction.md
     - The Loader: examples/A_loader.md

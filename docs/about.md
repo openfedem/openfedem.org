@@ -3,21 +3,21 @@
 
 ## The Team
 
-| Name/contact         | Mail to                                         | Role          | 
-|:---------------------|:------------------------------------------------|:--------------|
-| Oeystein Stranden    | [@OpenFEDEM](mailto:oeystein@openfedem.org)     | Product Owner |
-| Knut Morten Okstad   | [@OpenFEDEM](mailto:kmo@openfedem.org)           | Maintainer    |
-| Runar H Refsnaes     | [@OpenFEDEM](mailto:runar@openfedem.org)         | Maintainer    |
-| Guenter Glanzer      | [@OpenFEDEM](mailto:gglanzer@openfedem.org)      | Maintainer    |
-| Terje Roelvaag       | [@NTNU](mailto:terje.rolvag@ntnu.no)             | Contributor   |
-| Bjoern Haugen        | [@NTNU](mailto:bjorn.haugen@ntnu.no)             | Contributor   |
-| Kristian Saetertroe  | [@SAP](mailto:kristian.satertro@sap.com)         | Contributor   |
-| Jon Toendevoldshagen | [@OpenFEDEM](mailto:jon.tondevoldshagen@sap.com) | Contributor   |
+| Name/contact                                                                         | Role          | 
+|:-----------------------------------------------------------------------|:--------------|
+| [Oeystein Stranden @ OpenFEDEM](mailto:oeystein@openfedem.org)         | Product Owner |
+| [ Knut Morten Okstad @ OpenFEDEM](mailto:kmo@openfedem.org)            | Maintainer    |
+|[Runar H Refsnaes @ OpenFEDEM](mailto:runar@openfedem.org)             | Maintainer    |
+|[Guenter Glanzer @ OpenFEDEM](mailto:gglanzer@openfedem.org)           | Maintainer    |
+|[Terje Roelvaag @ NTNU](mailto:terje.rolvag@ntnu.no)                   | Contributor   |
+| [Bjoern Haugen @ NTNU](mailto:bjorn.haugen@ntnu.no)                    | Contributor   |
+| [Kristian Saetertroe @ SAP](mailto:kristian.satertro@sap.com)          | Contributor   |
+| [Jon Toendevoldshagen @ OpenFEDEM](mailto:jon.tondevoldshagen@sap.com) | Contributor   |
 
 
 
 <!
-## Project History
+## History
 Background and evolution of the software.
 
 ## Licensing and Usage
