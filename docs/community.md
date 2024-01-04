@@ -12,7 +12,7 @@
  * [FEDEM GUI](https://github.com/SAP/fedem-gui/discussions)
  * [FEDEM Solvers](https://github.com/SAP/fedem-solvers/discussions)
  * [FEDEM Models](https://github.com/openfedem/public_models/discussions)
- * [OpenFEDEM website](https://github:com/openfedem/openfedem.org/discussions)
+ * [OpenFEDEM website](https://github.com/openfedem/openfedem.org/discussions)
 
 ## Social media
 
