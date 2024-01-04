@@ -29,7 +29,7 @@ Follow these steps:
 
    See the [MkDocs Installation Guide](https://www.mkdocs.org/#installation) for further instructions.
 
-3. Navigate to the cloned directory `openfedem.org and run the command
+3. Navigate to the cloned directory `openfedem.org` and run the command
 
        mkdocs serve
 
@@ -62,7 +62,6 @@ Contributions to improve this website are welcome. Please follow these steps to 
 3. Make your changes and test them locally.
 4. Submit a pull request with a clear description of the changes.
 
-For more detailed instructions, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Administration
 
@@ -77,13 +76,9 @@ Build a local static version with `mkdocs build`. This will create or update a `
 to be pushed to the web server are located. This can be done from [one.com](https://www.one.com)'s file browser, alternatively using SFTP.
 Visit `one.com`'s user guide for more information.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).???
-
 ## Contact
 
-For questions or suggestions regarding OpenFEDEM, please contact [Your Contact Information]. ???
+For questions or suggestions regarding OpenFEDEM, please contact _TBN_.
 
 ---
 
