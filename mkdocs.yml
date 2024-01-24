@@ -6,7 +6,7 @@ nav:
   - How to:
     - How to:  how_to_get_started.md
     - Downloads:
-      - Installer:   https://github.com/SAP/fedem-gui/releases/download/fedem-8.0.0/FedemInstaller-R8.0.0.zip
+      - Installer: https://github.com/SAP/fedem-gui/releases/download/fedem-8.0.1/FedemInstaller-R8.0.1.zip
       - fedempy: https://github.com/SAP/fedem-solvers/releases/download/fedem-8.0.0/fedempy-3.0.2.tar.gz
   - Examples:
     - Introduction: examples/0_introduction.md
@@ -23,7 +23,7 @@ nav:
   - Documentation:
     - User and Theory Guides: guides/A_user_and_theory_guides.md
     - Learning Material: guides/B_tutorials_and_online_training.md
-    - API Manuals: guides/C_api_manuals.md
+    - Source code documentation: guides/C_source_code_documentation.md
 
   - Contribute: contributions.md
   - Community: community.md
