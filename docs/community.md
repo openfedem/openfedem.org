@@ -2,17 +2,17 @@
 
 ## Bugs and issues
 
- * [FEDEM GUI](https://github.com/SAP/fedem-gui/issues)
- * [FEDEM Solvers](https://github.com/SAP/fedem-solvers/issues)
+ * [FEDEM GUI](https://github.com/openfedem/fedem-gui/issues)
+ * [FEDEM Solvers](https://github.com/openfedem/fedem-solvers/issues)
  * [FEDEM Models](https://github.com/openfedem/public_models/issues)
- * [OpenFEDEM website](https://github.com/openfedem/openfedem.org/issues)
+ * [Open FEDEM website](https://github.com/openfedem/openfedem.org/issues)
 
 ## Forums and Support
 
- * [FEDEM GUI](https://github.com/SAP/fedem-gui/discussions)
- * [FEDEM Solvers](https://github.com/SAP/fedem-solvers/discussions)
+ * [FEDEM GUI](https://github.com/openfedem/fedem-gui/discussions)
+ * [FEDEM Solvers](https://github.com/openfedem/fedem-solvers/discussions)
  * [FEDEM Models](https://github.com/openfedem/public_models/discussions)
- * [OpenFEDEM website](https://github.com/openfedem/openfedem.org/discussions)
+ * [Open FEDEM website](https://github.com/openfedem/openfedem.org/discussions)
 
 ## Social media
 

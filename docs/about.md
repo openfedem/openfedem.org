@@ -41,5 +41,5 @@ on github, as a service to the existing user community.
 ## Licensing
 
 The software is licenced under the [Apache 2.0](https://opensource.org/license/apache-2-0/) license.
-For detailed information, visit the [FEDEM GUI](https://github.com/SAP/fedem-gui/blob/main/LICENSE) or
-[FEDEM Solvers](https://github.com/SAP/fedem-solvers/blob/main/LICENSE) license descriptions.
+For detailed information, visit the [FEDEM GUI](https://github.com/openfedem/fedem-gui/blob/main/LICENSE)
+or [FEDEM Solvers](https://github.com/openfedem/fedem-solvers/blob/main/LICENSE) license descriptions.

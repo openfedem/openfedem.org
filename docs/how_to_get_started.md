@@ -8,8 +8,8 @@ the latest built release, and run some of the example models provided.
 Currently, binaries are provided for Windows (64-bit) only.
 To install the latest release, proceed as follows:
 
-* Go to the [Releases](https://github.com/SAP/fedem-gui/releases) page
-  on the [fedem-gui](https://github.com/SAP/fedem-gui) repository on github.
+* Go to the [Releases](https://github.com/openfedem/fedem-gui/releases) page
+  on the [fedem-gui](https://github.com/openfedem/fedem-gui) repository on github.
 * Download the most recent zip-file `FedemInstaller-*.zip`
 * Unzip this file at arbitrary location on your PC.
 * Execute the `INSTALL.bat` file as administrator.
@@ -18,7 +18,7 @@ To install the latest release, proceed as follows:
   (`Fedem.exe`), and optionally create short-cuts to the executable on the user's Desktop
   and in the Windows Start menu.
 * Unless you already have Microsoft Visual Studio installed (2015 or later),
-  you also need to download and install some C++ runtime libraries from
+  you may also need to download and install some C++ runtime libraries from
   [Microsoft](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170)
   before you can run the installed FEDEM GUI or solvers on Windows.
   That is, download the file [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
