@@ -1,4 +1,6 @@
-# About the software
+# Welcome to FEDEM
+
+## About the software
 
 Fedem, an acronym for **F**inite **E**lement **D**ynamics in **E**lastic **M**echanisms,
 provides both a technology platform and an engineering framework for virtual testing of complex mechanical assemblies.
@@ -11,12 +13,68 @@ full stress analysis, eigenmode solutions, strain gage solutions and fatigue ana
 
 ![User Interface](images/user_interface_2.png)
 
-<!
 ## Core Features
- 
-Highlight unique aspects like real-time simulation, advanced material modeling, etc.
+The core features of the Fedem software, as outlined in the user guide and related documentation, include:
 
-## Target Audience 
-Engineers, researchers, and students in structural dynamics and civil engineering.
->
+1. **Modeling and Simulation**: Fedem allows users to create complex models using its graphical user interface (GUI). These models can include various mechanical components and systems, enabling detailed simulation of dynamic behavior.
+
+2. **Multibody Dynamics**: The software specializes in active nonlinear multibody dynamics[^1], allowing for the analysis of systems composed of interconnected rigid and flexible bodies. This is particularly useful for studying the motion and forces within mechanical systems.
+
+3. **Finite Element Analysis (FEA)**: Fedem integrates FEA capabilities to analyze the structural integrity of components under various load conditions. This feature is essential for stress and deformation analysis.
+
+4. **Integrated Solvers**: Fedem includes solvers for both dynamic and static analysis, providing comprehensive tools for engineers to evaluate the performance of their models under different scenarios.
+
+5. **User Interface and Visualization**: The software features an intuitive user interface that simplifies the modeling process. It also offers robust visualization tools to help users interpret simulation results effectively.
+
+6. **Customization and Scripting**: Advanced users can extend the functionality of Fedem through scripting and customization, enabling automation of repetitive tasks and integration with other software tools.
+
+7. **Application in Various Industries**: Fedem is used across multiple industries, including aerospace, automotive, and energy, for tasks such as designing mechanical systems, evaluating structural components, and optimizing product performance. 
+
+8. **Marine features**: Regular and irregular waves (JONSWAP), current, vessel RAOs[^2], see environment with marin growth. Import of standard marine components, such as mooring lines, beam strings, speaceframes (Jackets). 
+
+9. **Slender soil piles**: Soil pile interaction represented by P-Z, P-Y and T-Z curves emulating degradation of soil stiffness.  
+
+10. **[Outdated integration] Aerodynamic forces on wind turbines**: This feature was enabled by an earlier version of AeroDyn by NREL. AeroDyn uses the BEM (Blade Element Momentum) theory, which combines blade element theory and momentum theory to calculate the aerodynamic forces on each section of the wind turbine blade. If you have interest in this capability and want to contribute re-enablement of it, please reach out to us with a mail to the [developers](mailto:developers@openfedem.org). 
+
+For detailed instructions and theoretical background, you can refer to the [Fedem User and Theory Guides](https://www.openfedem.org/guides/A_user_and_theory_guides/).
+
+
+## History
+
+The theory behind the FEDEM solvers was originally developed by the late
+Professor Ole Ivar Sivertsen, in the late 1970s and through the 1980s.
+His work initiated new Ph.D. studies and international R&D projects
+that contributed to the development of the first FEDEM software product.
+
+On the basis of Professor Sivertsen's work, a company was established in 1992
+by SINTEF, Northern Europe's largest R&D institute based in Trondheim, Norway.
+Computer speed reached levels that would allow the theories to produce results,
+and visualization technology made it possible to create a user interface.
+During this period the FEDEM software was strictly an inhouse code at SINTEF.
+
+In 1995 the company Fedem AS, which later became Fedem Technology AS,
+continued the development of the user interface and made it possible to offer
+FEDEM as a commercial product in 1998.
+
+The FEDEM software was continuously developed as a product by Fedem Technology AS
+during the 2000s and 2010s while it was also used as an internal tool in
+various consultancy projects, until the company was acquired by SAP SE in 2016.
+Since then, the FEDEM solvers have been provided as components in the
+EPD Connected Products by SAP, until the sunsetting of the Connected Products
+in 2023. It was then decided to release FEDEM under a open source license
+on GitHub, as a service to the existing user community.
+
+## Licensing
+
+The software is licenced under the [Apache 2.0](https://opensource.org/license/apache-2-0/) license.
+For detailed information, visit the [FEDEM GUI](https://github.com/openfedem/fedem-gui/blob/main/LICENSE)
+or [FEDEM Solvers](https://github.com/openfedem/fedem-solvers/blob/main/LICENSE) license descriptions.
+
+## Footnotes
+
+
+[^1]: Active nonlinear multibody dynamics refers to the simulation of systems composed of interconnected flexible bodies where both the geometry and the forces involved can change in a nonlinear manner over time. This involves complex interactions and deformations, requiring sophisticated numerical methods to accurately model the behavior of the system under various conditions. The term "active" indicates the presence of a control system that dynamically influences the behavior and responses of the system, enhancing its ability to adapt to varying conditions and inputs.
+
+[^2]: RAO is a frequency-domain representation that quantifies how much a vessel will respond to a given wave frequency. It is expressed as a ratio of the vessel's motion amplitude in Surge, Sway, Heave, Roll, Pitch, Yaw to the wave amplitude for each frequency component.
+
 
