@@ -3,7 +3,7 @@
 
 site_name: OpenFEDEM
 site_url: https://openfedem.org/
-repo_url: https://github.com/OpenFEDEM
+repo_url: https://github.com/openfedem/openfedem.org
 
 nav:
   - Welcome: index.md
@@ -13,9 +13,9 @@ nav:
     - Python API (fedempy): python_api.md
   - Documentation:
       - User Guide (PDF): fedem_docs/FedemUsersGuide.pdf
-      - Python API (fedempy): https://openfedem.github.io/fedem-solvers/fedempy
       - Theory Guide (PDF): fedem_docs/FedemTheoryGuide.pdf
-      #- User and Theory Guides: guides/A_user_and_theory_guides.md
+      - Python API (fedempy): https://openfedem.github.io/fedem-solvers/fedempy/
+      - Solver source code: https://openfedem.github.io/fedem-solvers/solver/
       - Tutorials: tutorials.md
       - YouTube videos: youtube_videos.md
   - Discussions: discussions.md
