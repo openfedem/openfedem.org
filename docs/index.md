@@ -2,39 +2,43 @@
 
 ## About the software
 
-Fedem, an acronym for **F**inite **E**lement **D**ynamics in **E**lastic **M**echanisms,
+FEDEM, an acronym for **F**inite **E**lement **D**ynamics in **E**lastic **M**echanisms,
 provides both a technology platform and an engineering framework for virtual testing of complex mechanical assemblies.
-It provides a complete set of features to create, solve and post-process a model in a 3D graphical environment. 
+It provides a complete set of features to create, solve and post-process a model in a 3D graphical environment.
 Dynamics results in the form of curves and animations are available during and after model solution.
-Combined with the fast and numerically stable Fedem solvers, the user interface facilitates an engineering process
+Combined with the fast and numerically stable FEDEM solvers, the user interface facilitates an engineering process
 with shortened turnaround times and quick access to simulation results for a clearer understanding of the physical
-behavior of the model. Fedem also provides intuitive and high-performing post-processing capabilities, including 
+behavior of the model. FEDEM also provides intuitive and high-performing post-processing capabilities, including
 full stress analysis, eigenmode solutions, strain gage solutions and fatigue analysis for selected time steps.
 
 ![User Interface](images/user_interface_2.png)
 
-## Core Features
-The core features of the Fedem software, as outlined in the user guide and related documentation, include:
+## Core features
 
-1. **Modeling and Simulation**: Fedem allows users to create complex models using its graphical user interface (GUI). These models can include various mechanical components and systems, enabling detailed simulation of dynamic behavior.
+The core features of the FEDEM software, as outlined in the user guide and related documentation, include:
+
+1. **Modeling and Simulation**: FEDEM allows users to create complex models using its graphical user interface (GUI). These models can include various mechanical components and systems, enabling detailed simulation of dynamic behavior.
 
 2. **Multibody Dynamics**: The software specializes in active nonlinear multibody dynamics[^1], allowing for the analysis of systems composed of interconnected rigid and flexible bodies. This is particularly useful for studying the motion and forces within mechanical systems.
 
-3. **Finite Element Analysis (FEA)**: Fedem integrates FEA capabilities to analyze the structural integrity of components under various load conditions. This feature is essential for stress and deformation analysis.
+3. **Finite Element Analysis (FEA)**: FEDEM integrates FEA capabilities to analyze the structural integrity of components under various load conditions. This feature is essential for stress and deformation analysis.
 
-4. **Integrated Solvers**: Fedem includes solvers for both dynamic and static analysis, providing comprehensive tools for engineers to evaluate the performance of their models under different scenarios.
+4. **Integrated Solvers**: FEDEM includes solvers for both dynamic and static analysis, providing comprehensive tools for engineers to evaluate the performance of their models under different scenarios.
 
 5. **User Interface and Visualization**: The software features an intuitive user interface that simplifies the modeling process. It also offers robust visualization tools to help users interpret simulation results effectively.
 
-6. **Customization and Scripting**: Advanced users can extend the functionality of Fedem through scripting and customization, enabling automation of repetitive tasks and integration with other software tools.
+6. **Customization and Scripting**: Advanced users can extend the functionality of FEDEM through scripting and customization, enabling automation of repetitive tasks and integration with other software tools.
 
-7. **Application in Various Industries**: Fedem is used across multiple industries, including aerospace, automotive, and energy, for tasks such as designing mechanical systems, evaluating structural components, and optimizing product performance. 
+7. **Application in Various Industries**: FEDEM is used across multiple industries, including aerospace, automotive, and energy, for tasks such as designing mechanical systems, evaluating structural components, and optimizing product performance.
 
-8. **Marine features**: Regular and irregular waves (JONSWAP), current, vessel RAOs[^2], see environment with marin growth. Import of standard marine components, such as mooring lines, beam strings, speaceframes (Jackets). 
+8. **Marine features**: Regular and irregular waves (JONSWAP), current, vessel RAOs[^2], see environment with marin growth. Import of standard marine components, such as mooring lines, beam strings, space frames (Jackets).
 
-9. **Slender soil piles**: Soil pile interaction represented by P-Z, P-Y and T-Z curves emulating degradation of soil stiffness.  
+9. **Slender soil piles**: Soil pile interaction represented by P-Z, P-Y and T-Z curves emulating degradation of soil stiffness.
 
-10. **[Outdated integration] Aerodynamic forces on wind turbines**: This feature was enabled by an earlier version of AeroDyn by NREL. AeroDyn uses the BEM (Blade Element Momentum) theory, which combines blade element theory and momentum theory to calculate the aerodynamic forces on each section of the wind turbine blade. If you have interest in this capability and want to contribute re-enablement of it, please reach out to us with a mail to the [developers](mailto:developers@openfedem.org). 
+10. **[Outdated integration] Aerodynamic forces on wind turbines**: This feature was enabled by an earlier version of [AeroDyn](https://www.nrel.gov/wind/nwtc/aerodyn.html) by NREL.
+AeroDyn uses the BEM (Blade Element Momentum) theory, which combines blade element theory and momentum theory to calculate the aerodynamic forces on each section of the wind turbine blade. The functionality is based in AeroDyn version 13 and has not been updated support the newer versions 14 and 15.
+If you have interest in this capability and want to contribute re-enablement of it,
+please reach out to us with an email to [developers](mailto:developers@openfedem.org).
 
 For detailed instructions and theoretical background, you can refer to the [Fedem User and Theory Guides](https://www.openfedem.org/guides/A_user_and_theory_guides/).
 
@@ -72,9 +76,6 @@ or [FEDEM Solvers](https://github.com/openfedem/fedem-solvers/blob/main/LICENSE)
 
 ## Footnotes
 
-
 [^1]: Active nonlinear multibody dynamics refers to the simulation of systems composed of interconnected flexible bodies where both the geometry and the forces involved can change in a nonlinear manner over time. This involves complex interactions and deformations, requiring sophisticated numerical methods to accurately model the behavior of the system under various conditions. The term "active" indicates the presence of a control system that dynamically influences the behavior and responses of the system, enhancing its ability to adapt to varying conditions and inputs.
 
 [^2]: RAO is a frequency-domain representation that quantifies how much a vessel will respond to a given wave frequency. It is expressed as a ratio of the vessel's motion amplitude in Surge, Sway, Heave, Roll, Pitch, Yaw to the wave amplitude for each frequency component.
-
-
