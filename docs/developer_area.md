@@ -1,6 +1,6 @@
 # Developer area
 
-## The core team
+## Developers
 
 | Name/contact                                                   | Role        | Name/contact                                                   | Role        |
 |:---------------------------------------------------------------|:------------|:---------------------------------------------------------------|:------------|
@@ -29,7 +29,9 @@ Contribution and feedback are encouraged and always welcome.
 For more information about how to contribute, see our
 [Contribution Guidelines](https://github.com/openfedem/fedem-gui/blob/main/.github/CONTRIBUTING.md).
 
-If you as a developer is interested in joining the core team, we invite you to reach out to us at [developers@openfedem.org](mailto:developers@openfedem.org) to discuss potential collaboration opportunities.
+If you as a developer is interested in joining the OpenFEDEM team,
+we invite you to reach out to us at [developers@openfedem.org](mailto:developers@openfedem.org)
+to discuss potential collaboration opportunities.
 
 ## Code of Conduct
 
