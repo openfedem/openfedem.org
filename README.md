@@ -2,14 +2,15 @@ OpenFEDEM Website
 =================
 
 Welcome to the repository for the OpenFEDEM Website.
-This repository contains the source files (Markdown) and content for the [OpenFEDEM website](https://www.openfedem.org).
+This repository contains the source files (Markdown) and content
+for the [OpenFEDEM website](https://openfedem.org/).
 
 ## Introduction
 
-OpenFEDEM (Open Finite Element Dynamics of Elastic Mechanisms) is an open source software package
+OpenFEDEM (Open Finite Element Dynamics in Elastic Mechanisms) is an open source software package
 developed to provide comprehensive solutions in active nonlinear structural dynamics and adjacent engineering fields.
-The GUI part of this package can be found at [SAP/fedem-gui](https://github.com/SAP/fedem-gui)
-whereas the solvers can be fond at [SAP/fedem-solvers](https://github.com/SAP/fedem-solvers).
+The GUI part of this package can be found at [openfedem/fedem-gui](https://github.com/openfedem/fedem-gui)
+whereas the solvers can be fond at [openfedem/fedem-solvers](https://github.com/openfedem/fedem-solvers).
 
 This repository is dedicated to the development and maintenance of OpenFEDEM's official website,
 built using [MkDocs](https://www.mkdocs.org/) from the Markdown source files.
@@ -62,25 +63,26 @@ Contributions to improve this website are welcome. Please follow these steps to 
 3. Make your changes and test them locally.
 4. Submit a pull request with a clear description of the changes.
 
-
 ## Administration
 
 All raw files used by `MkDocs` to make the static website shall be located under the [docs](docs) directory
 and adequately linked into the `nav` section of the [mkdocs.yml](mkdocs.yml) file.
 
-### Publish
+## Publish
 
 Publishing new website content can only be performed using the OpenFEDEM website admin user.
 
-Build a local static version with `mkdocs build`. This will create or update a `site` directory where all the files
-to be pushed to the web server are located. This can be done from [one.com](https://www.one.com)'s file browser, alternatively using SFTP.
+Build a local static version with `mkdocs build`.
+This will create or update a `site` directory where all the files to be pushed to the web server are located.
+This can be done from [one.com](https://www.one.com)'s file browser, alternatively using SFTP.
 Visit `one.com`'s user guide for more information.
 
 ## Contact
 
-For questions or suggestions regarding OpenFEDEM, please contact the `Product Owner` or a `Maintainer` listed [here](https://openfedem.org/about/).
+For questions or suggestions regarding OpenFEDEM,
+please contact a `Maintainer` listed [here](https://openfedem.org/developer_area).
 
 ---
 
-This README is a guide to help users and contributors understand and participate in the development of the OpenFEDEM **_website_**. For more information on the OpenFEDEM software's source code, visit [fedem-gui repository](https://github.com/SAP/fedem-gui) and/or [fedem-solvers repository](https://github.com/SAP/fedem-solvers).
-
+This README is a guide to help users and contributors understand and participate in the development of the OpenFEDEM **_website_**. For more information on the OpenFEDEM software's source code,
+please visit the [fedem-gui](https://github.com/openfedem/fedem-gui) and/or the [fedem-solvers](https://github.com/SAP/fedem-solvers) repositories.

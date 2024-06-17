@@ -1,40 +1,57 @@
+#  pip install mkdocs-material
+#  pip install pymdown-extensions
+
 site_name: OpenFEDEM
 site_url: https://openfedem.org/
+repo_url: https://github.com/openfedem/openfedem.org
 
 nav:
-  - Home: index.md
-  - How to:
-    - How to: how_to_get_started.md
-    - Downloads:
-      - Installer: https://github.com/openfedem/fedem-gui/releases/download/fedem-8.0.2.3/FedemInstaller-R8.0.2.zip
-      - fedempy: https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.0.2.3/fedempy-3.2.3.tar.gz
-  - Examples:
-    - Introduction: examples/0_introduction.md
-    - The Loader: examples/A_loader.md
-    #- Simple: examples/A_simple.md
-    #- Advanced: examples/B_advanced.md
-    #- Model imports: examples/C_imports.md
-    #- Industrial applications: examples/D_industrial_applications.md
-    #- Simulators: examples/E_simulators.md
-    #- Digital Twins: examples/F_digital_twins.md
-    #- Benchmarks: examples/G_case_studies.md
-    #- Physics cases: examples/H_physics.md
-    #- API: examples/I_api.md
+  - Welcome: index.md
+  - Getting started:
+    - Installation Guide: installation_guide.md
+    - Development Setup: development_setup.md
+    - Python API (fedempy): python_api.md
   - Documentation:
-    - User and Theory Guides: guides/A_user_and_theory_guides.md
-    - Learning Material: guides/B_tutorials_and_online_training.md
-    - Source code documentation: guides/C_source_code_documentation.md
+      - User Guide (PDF): fedem_docs/FedemUsersGuide.pdf
+      - Theory Guide (PDF): fedem_docs/FedemTheoryGuide.pdf
+      - Python API (fedempy): https://openfedem.github.io/fedem-solvers/fedempy/
+      - Solver source code: https://openfedem.github.io/fedem-solvers/solver/
+      - Tutorials: tutorials.md
+      - YouTube videos: youtube_videos.md
+  - Discussions: discussions.md
+  - Issues (Bugs): issues.md
+    #  GUI...:  https://github.com/openfedem/fedem-gui/issues
+    #  Solvers...: https://github.com/openfedem/fedem-solvers/issues
+    #  Models...: https://github.com/openfedem/public_models/issues
+    #  Website...: https://github.com/openfedem/openfedem.org/issues
+  - Examples:
+      - Introduction: examples/0_introduction.md
+      - The Loader: examples/A_loader.md
+      #- Simple: examples/A_simple.md
+      #- Advanced: examples/B_advanced.md
+      #- Model imports: examples/C_imports.md
+      #- Industrial applications: examples/D_industrial_applications.md
+      #- Simulators: examples/E_simulators.md
+      #- Digital Twins: examples/F_digital_twins.md
+      #- Benchmarks: examples/G_case_studies.md
+      #- Physics cases: examples/H_physics.md
+      #- API: examples/I_api.md
 
-  - Contribute: contributions.md
-  - Community: community.md
-  - About: about.md
+  - Developer area: developer_area.md
+
+  - Partner area: partner_area.md
 
 theme:
-  logo: images/logo.png
+  logo: images/FEDEM-logo-new-low.jpg
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+    #- navigation.sections
+    - header.autohide
+    - navigation.path
+
   name: material
+  #name: rtd-dropdown
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -46,14 +63,18 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+  #icon:
+  #  previous: fontawesome/solid/angle-left
+  #  next: fontawesome/solid/angle-right
 
 markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_code_format  # Requires: pip install pymdown-extensions
   - attr_list
+  - footnotes
 
 extra_css:
     - css/custom.css
