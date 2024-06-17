@@ -31,17 +31,15 @@ The core features of the FEDEM software, as outlined in the user guide and relat
 
 7. **Application in Various Industries**: FEDEM is used across multiple industries, including aerospace, automotive, and energy, for tasks such as designing mechanical systems, evaluating structural components, and optimizing product performance.
 
-8. **Marine features**: Regular and irregular waves (JONSWAP), current, vessel RAOs[^2], see environment with marin growth. Import of standard marine components, such as mooring lines, beam strings, space frames (Jackets).
+8. **Marine features**: Regular and irregular waves (JONSWAP), current, vessel RAOs[^2], sea environment with marine growth. Import of standard marine components, such as mooring lines, beam strings, space frames (Jackets).
 
 9. **Slender soil piles**: Soil pile interaction represented by P-Z, P-Y and T-Z curves emulating degradation of soil stiffness.
 
 10. **[Outdated integration] Aerodynamic forces on wind turbines**: This feature was enabled by an earlier version of [AeroDyn](https://www.nrel.gov/wind/nwtc/aerodyn.html) by NREL.
-AeroDyn uses the BEM (Blade Element Momentum) theory, which combines blade element theory and momentum theory to calculate the aerodynamic forces on each section of the wind turbine blade. The functionality is based in AeroDyn version 13 and has not been updated support the newer versions 14 and 15.
-If you have interest in this capability and want to contribute re-enablement of it,
-please reach out to us with an email to [developers](mailto:developers@openfedem.org).
-
-For detailed instructions and theoretical background, you can refer to the [Fedem User and Theory Guides](https://www.openfedem.org/guides/A_user_and_theory_guides/).
-
+AeroDyn uses the BEM (Blade Element Momentum) theory, which combines blade element theory and momentum theory to calculate the aerodynamic forces on each section of the wind turbine blade.
+The functionality is based on AeroDyn version 13 and has not been updated to support the newer versions 14 and 15.
+If you have interest in this capability and want to contribute the re-enablement of it,
+please reach out to us with an email to the [developers](mailto:developers@openfedem.org).
 
 ## History
 
@@ -65,7 +63,7 @@ during the 2000s and 2010s while it was also used as an internal tool in
 various consultancy projects, until the company was acquired by SAP SE in 2016.
 Since then, the FEDEM solvers have been provided as components in the
 EPD Connected Products by SAP, until the sunsetting of the Connected Products
-in 2023. It was then decided to release FEDEM under a open source license
+in 2023. It was then decided to release FEDEM under an open source license
 on GitHub, as a service to the existing user community.
 
 ## Licensing

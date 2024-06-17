@@ -1,6 +1,6 @@
 # Developer area
 
-## Developers
+## The core team
 
 | Name/contact                                                   | Role        | Name/contact                                                   | Role        |
 |:---------------------------------------------------------------|:------------|:---------------------------------------------------------------|:------------|
@@ -18,7 +18,7 @@
 | [Administration](mailto:admin@openfedem.org)   | Non-technical inquiries related to the open source consortium |
 | [Development](mailto:developers@openfedem.org) | Inquiries related to development of the source code           |
 | [Application](mailto:analysts@openfedem.org)   | Inquiries related to application of FEDEM                     |  
-| [Partnership](mailto:parners@openfedem.org)     | Inquiries related to partnership                              |
+| [Partnership](mailto:parners@openfedem.org)    | Inquiries related to partnership                              |
 
 
 ## Contributing
