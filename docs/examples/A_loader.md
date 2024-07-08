@@ -1,5 +1,6 @@
-# The Loader  
-This model represents a simplified front end of a front loader and contains the following parts:
+# The Loader
+
+This model represents a simplified front-end of a front loader and consists of the following FE Parts:
 
 * Loader Front Frame
 * Lifting Arm
@@ -7,22 +8,24 @@ This model represents a simplified front end of a front loader and contains the 
 * Bell crank
 * Bucket link
 
-The cylinders are represented with axial springs dampers, while the joints are represented by revolute joints.
+The hydraulic cylinders are represented by Axial Springs and Dampers,
+while the joints are represented by Revolute joint objects.
 
 ![loader](../images/loader_model.png)
 
 ## Basic lifting operation
-The model is activated with a time dependent function for the spring elongation.
+
+The model is activated with a time-dependent function for the spring elongation.
 
 The model is loaded by increasing the mass in the bucket.
 
-<!
+<!--
 ## Improved cylinder models
 Beam elements are used to model the cylinders, improving the mass distribution and the stiffness of the cylinders.
 
 ## Case 3: Improved load model, using mass elements
 ## Case 4: Improved cylinder control, using PID controller
->
+-->
 
 ## Solver control with Python API
 
@@ -36,9 +39,9 @@ from fedempy.enums import FmDof, FmDofStat, FmLoadType, FmType, FmVar
 ...
 ```
 
-
 ## Load driven Digital Twin
-[Download...](linked_files%2Floader_modeling_and_solving.py)
+
+[Download...](linked_files/loader_modeling_and_solving.py)
 
 ```python
 from pathlib import Path
@@ -127,7 +130,8 @@ my_solver.close_model(False)
 ```
 
 ## Low-code modeling
-[Download...](linked_files%2Floader_model.yaml)
+
+[Download...](linked_files/loader_model.yaml)
 
 ```yaml
 target_file: 02-loader-y100.fmm
@@ -238,14 +242,3 @@ fedem_objects:
     DESCR: Front no. 2 | tagging_2
 
 ```
-
-
-
-
-
-
-
-
-
-
-
