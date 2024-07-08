@@ -84,5 +84,7 @@ please contact a `Maintainer` listed [here](https://openfedem.org/developer_area
 
 ---
 
-This README is a guide to help users and contributors understand and participate in the development of the OpenFEDEM **_website_**. For more information on the OpenFEDEM software's source code,
-please visit the [fedem-gui](https://github.com/openfedem/fedem-gui) and/or the [fedem-solvers](https://github.com/SAP/fedem-solvers) repositories.
+This README is a guide to help users and contributors understand and participate in the development of the OpenFEDEM **_website_**.
+For more information on the OpenFEDEM software's source code, please visit
+the [fedem-gui](https://github.com/openfedem/fedem-gui) and/or
+the [fedem-solvers](https://github.com/openfedem/fedem-solvers) repositories.
