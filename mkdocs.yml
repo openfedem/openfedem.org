@@ -3,7 +3,7 @@
 
 site_name: OpenFEDEM
 site_url: https://openfedem.org/
-repo_url: https://github.com/openfedem/openfedem.org
+repo_url: https://github.com/openfedem/
 
 nav:
   - Welcome: index.md
@@ -20,10 +20,6 @@ nav:
       - YouTube videos: youtube_videos.md
   - Discussions: discussions.md
   - Issues (Bugs): issues.md
-    #  GUI...:  https://github.com/openfedem/fedem-gui/issues
-    #  Solvers...: https://github.com/openfedem/fedem-solvers/issues
-    #  Models...: https://github.com/openfedem/public_models/issues
-    #  Website...: https://github.com/openfedem/openfedem.org/issues
   - Examples:
       - Introduction: examples/0_introduction.md
       - The Loader: examples/A_loader.md
@@ -36,9 +32,7 @@ nav:
       #- Benchmarks: examples/G_case_studies.md
       #- Physics cases: examples/H_physics.md
       #- API: examples/I_api.md
-
   - Developer area: developer_area.md
-
   - Partner area: partner_area.md
 
 theme:
