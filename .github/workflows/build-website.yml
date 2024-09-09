@@ -1,0 +1,40 @@
+name: Build home page
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build-web:
+    name: Build the docs
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install MkDocs
+        run: pip install mkdocs mkdocs-material pymdown-extensions
+
+      - name: Silence hint on initial branch
+        run: git config --global init.defaultBranch main
+
+      - name: Check out source repository
+        uses: actions/checkout@v4
+
+      - name: Build the web pages
+        run: mkdocs build
+
+      - name: Deploy on web server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.openfedem.org
+          username: openfedem.org
+          password: ${{ secrets.FTP_ONE_PW }}
+          local-dir: ./site/
