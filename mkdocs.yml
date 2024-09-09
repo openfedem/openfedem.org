@@ -12,8 +12,8 @@ nav:
     - Development Setup: development_setup.md
     - Python API (fedempy): python_api.md
   - Documentation:
-      - User Guide (PDF): fedem_docs/FedemUsersGuide.pdf
-      - Theory Guide (PDF): fedem_docs/FedemTheoryGuide.pdf
+      - User Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.4/FedemUsersGuide.pdf
+      - Theory Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.4/FedemTheoryGuide.pdf
       - Python API (fedempy): https://openfedem.github.io/fedem-solvers/fedempy/
       - Solver source code: https://openfedem.github.io/fedem-solvers/solver/
       - Tutorials: tutorials.md
