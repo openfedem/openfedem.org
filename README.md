@@ -1,4 +1,5 @@
 [![Build home page](https://github.com/openfedem/openfedem.org/actions/workflows/build-website.yml/badge.svg)](https://github.com/openfedem/openfedem.org/actions/workflows/build-website.yml)
+
 [<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=2b9348">](https://github.com/SamKirkland/FTP-Deploy-Action)
 
 # Open FEDEM Website
@@ -76,8 +77,11 @@ Publishing new website content can only be performed using the OpenFEDEM website
 
 Build a local static version with `mkdocs build`.
 This will create or update a `site` directory where all the files to be pushed to the web server are located.
-This can be done from [one.com](https://www.one.com)'s file browser, alternatively using SFTP.
-Visit `one.com`'s user guide for more information.
+This can be done manually from [one.com](https://www.one.com)'s file browser, alternatively using FTP.
+Visit one.com's [User guide](https://help.one.com/hc/en-us/categories/360002171437-Hosting) for more information.
+
+The github action [Build home page](https://github.com/openfedem/openfedem.org/actions/workflows/build-website.yml)
+will do this automatically whenever an update is pushed to the main branch of this repository.
 
 ## Contact
 
