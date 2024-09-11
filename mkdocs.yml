@@ -3,7 +3,7 @@
 
 site_name: OpenFEDEM
 site_url: https://openfedem.org/
-repo_url: https://github.com/openfedem/
+repo_url: https://github.com/openfedem/fedem-gui/
 
 nav:
   - Welcome: index.md
@@ -36,7 +36,7 @@ nav:
   - Partner area: partner_area.md
 
 theme:
-  logo: images/FEDEM-logo-new-low.jpg
+  logo: images/FEDEM-logo-new.png
   features:
     #- navigation.tabs
     #- navigation.tabs.sticky
@@ -71,4 +71,4 @@ markdown_extensions:
   - footnotes
 
 extra_css:
-    - css/custom.css
+  - css/custom.css
