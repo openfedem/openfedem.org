@@ -35,16 +35,17 @@ The core features of the FEDEM software, as outlined in the user guide and relat
 
 9. **Slender soil piles**: Soil pile interaction represented by P-Z, P-Y and T-Z curves emulating degradation of soil stiffness.
 
-10. **[Outdated integration] Aerodynamic forces on wind turbines**: This feature was enabled by an earlier version of [AeroDyn](https://www.nrel.gov/wind/nwtc/aerodyn.html) by NREL.
+10. **Windpower features**: Modeling and simulation of wind turbines with aerodynamic forces.
+This feature was enabled by an earlier version of [AeroDyn](https://www.nrel.gov/wind/nwtc/aerodyn.html) by NREL, which is integrated with the FEDEM dynamics solver.
 AeroDyn uses the BEM (Blade Element Momentum) theory, which combines blade element theory and momentum theory to calculate the aerodynamic forces on each section of the wind turbine blade.
 The functionality is based on AeroDyn version 13 and has not been updated to support the newer versions 14 and 15.
-If you have interest in this capability and want to contribute the re-enablement of it,
+AeroDyn 13 is not included with the FEDEM open source project. However, if you have interest in this capability,
 please reach out to us with an email to the [developers](mailto:developers@openfedem.org).
 
 ## History
 
 The theory behind the FEDEM solvers was originally developed by the late
-Professor Ole Ivar Sivertsen, in the late 1970s and through the 1980s.
+Professor Ole Ivar Sivertsen, during the late 1970s and through the 1980s.
 His work initiated new Ph.D. studies and international R&D projects
 that contributed to the development of the first FEDEM software product.
 
