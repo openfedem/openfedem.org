@@ -11,18 +11,22 @@ nav:
     - Installation Guide: installation_guide.md
     - Development Setup: development_setup.md
     - Python API (fedempy): python_api.md
+  - Download:
+    - Windows installer (zip): https://github.com/openfedem/fedem-gui/releases/download/fedem-8.0.7/FedemInstaller-R8.0.7.zip
+    - Linux solvers (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.0.7/fedem-solvers-3.7.1_linux64.tar.gz
+    - fedempy package (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.0.7/fedempy-3.7.1.tar.gz
   - Documentation:
-      - User Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.4/FedemUsersGuide.pdf
-      - Theory Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.4/FedemTheoryGuide.pdf
-      - Python API (fedempy): https://openfedem.github.io/fedem-solvers/fedempy/
-      - Solver source code: https://openfedem.github.io/fedem-solvers/solver/
-      - Tutorials: tutorials.md
-      - YouTube videos: youtube_videos.md
+    - User Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.7/FedemUsersGuide.pdf
+    - Theory Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.7/FedemTheoryGuide.pdf
+    - Python API (fedempy): https://openfedem.github.io/fedem-solvers/fedempy/
+    - Solver source code: https://openfedem.github.io/fedem-solvers/solver/
+    - Tutorials: tutorials.md
+    - YouTube videos: youtube_videos.md
   - Discussions: discussions.md
   - Issues (Bugs): issues.md
   - Examples:
-      - Introduction: examples/0_introduction.md
-      - The Loader: examples/A_loader.md
+    - Introduction: examples/0_introduction.md
+    - The Loader: examples/A_loader.md
       #- Simple: examples/A_simple.md
       #- Advanced: examples/B_advanced.md
       #- Model imports: examples/C_imports.md
