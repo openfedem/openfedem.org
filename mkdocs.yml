@@ -76,3 +76,8 @@ markdown_extensions:
 
 extra_css:
   - css/custom.css
+
+plugins:
+  - search
+  - git-revision-date-localized:  # Requires: pip install mkdocs-git-revision-date-localized-plugin
+      enable_creation_date: true
