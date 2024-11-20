@@ -27,9 +27,9 @@ Follow these steps:
 
        git clone https://github.com/openfedem/openfedem.org.git
 
-2. Install MkDocs:
+2. Install MkDocs with extensions:
 
-       pip install mkdocs mkdocs-material pymdown-extensions
+       pip install mkdocs mkdocs-material pymdown-extensions mkdocs-git-revision-date-localized-plugin
 
    See the [MkDocs Installation Guide](https://www.mkdocs.org/#installation) for further instructions.
 
@@ -53,9 +53,9 @@ After setting up the local environment:
 
 ## Conversions
 
-The first line holds the title of the subpage and shall have Markdown heading level 1, typically `#<title>`
+The first line holds the title of the subpage and shall have Markdown heading level 1, typically `# <title>`.
 
-The Markdown heading level 2, e.g., `##<section heading>`, represents the first section level, and so on.
+The Markdown heading level 2, e.g., `## <section heading>`, represents the first section level, and so on.
 
 ## Contributing
 

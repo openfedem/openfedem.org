@@ -9,8 +9,10 @@ Currently, binaries are provided for Windows (64-bit) only.
 To install the latest release, proceed as follows:
 
 * Go to the [Releases](https://github.com/openfedem/fedem-gui/releases) page
-  on the [fedem-gui](https://github.com/openfedem/fedem-gui) repository on github.
-* Download the most recent zip-file `FedemInstaller-*.zip`
+  on the [fedem-gui](https://github.com/openfedem/fedem-gui) repository on github,
+  and download the most recent zip-file `FedemInstaller-*.zip`.
+* Alternatively, you may download the latest Windows installer
+  from the **Download** menu in the left pane.
 * Unzip this file at arbitrary location on your PC.
 * Execute the `INSTALL.bat` file as administrator.
   This will (by default) install the software in the folder "C:\Program Files\FEDEM"
@@ -54,9 +56,7 @@ The FEDEM main windows consists of the following items:
   which provides information of the status, progress information
   and whether a solver process is running.
 
-Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.4/FedemUsersGuide.pdf)
+Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.7/FedemUsersGuide.pdf)
 for further details on the FEDEM GUI.
 
 If you already have a FEDEM model file, the easiest way to open it is to just double-click the file in the Windows file browser.
-
-
