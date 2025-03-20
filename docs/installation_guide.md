@@ -56,7 +56,7 @@ The FEDEM main windows consists of the following items:
   which provides information of the status, progress information
   and whether a solver process is running.
 
-Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.7/FedemUsersGuide.pdf)
+Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.9/FedemUsersGuide.pdf)
 for further details on the FEDEM GUI.
 
 If you already have a FEDEM model file, the easiest way to open it is to just double-click the file in the Windows file browser.

@@ -12,12 +12,12 @@ nav:
     - Development Setup: development_setup.md
     - Python API (fedempy): python_api.md
   - Download:
-    - Windows installer (zip): https://github.com/openfedem/fedem-gui/releases/download/fedem-8.0.7/FedemInstaller-R8.0.7.zip
-    - Linux solvers (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.0.7/fedem-solvers-3.7.1_linux64.tar.gz
-    - fedempy package (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.0.7/fedempy-3.7.1.tar.gz
+    - Windows installer (zip): https://github.com/openfedem/fedem-gui/releases/download/fedem-8.0.9/FedemInstaller-R8.0.9.zip
+    - Linux solvers (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.0.9/fedem-solvers-3.9.1_linux64.tar.gz
+    - fedempy package (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.0.9/fedempy-3.9.1.tar.gz
   - Documentation:
-    - User Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.7/FedemUsersGuide.pdf
-    - Theory Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.7/FedemTheoryGuide.pdf
+    - User Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.9/FedemUsersGuide.pdf
+    - Theory Guide (PDF): https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.9/FedemTheoryGuide.pdf
     - Python API (fedempy): https://openfedem.github.io/fedem-solvers/fedempy/
     - Solver source code: https://openfedem.github.io/fedem-solvers/solver/
     - Tutorials: tutorials.md
