@@ -5,8 +5,8 @@ the latest built release, and run some of the example models provided.
 
 ## Installation
 
-Currently, binaries are provided for Windows (64-bit) only.
-To install the latest release, proceed as follows:
+64-bit binaries are now provided for both Windows and Linux (Ubuntu 22.04).
+To install the latest Windows release, proceed as follows:
 
 * Go to the [Releases](https://github.com/openfedem/fedem-gui/releases) page
   on the [fedem-gui](https://github.com/openfedem/fedem-gui) repository on github,
@@ -26,12 +26,30 @@ To install the latest release, proceed as follows:
   That is, download the file [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
   and execute it as administrator.
 
+To install the latest Linux release,
+download the most recent `Fedem-*_Ubuntu-22.04.tar.gz` file
+from the [Releases](https://github.com/openfedem/fedem-gui/releases) page
+(it is also available from the  **Download** menu in the left pane).
+
+Unpack this file in the location where you want to have Fedem installed, e.g.:
+
+    $ cd /usr/local
+    $ sudo tar zxfv ~/Downloads/Fedem-R8.1.0_Ubuntu-22.04.tar.gz
+
+This will install Fedem R8.1.0 in the folder `/usr/local/Fedem-8.1.0`.
+
+Then, install the required Qt6 packages:
+
+    $ sudo apt install libqt6core6 libqt6gui6 libqt6widgets6 libqt6opengl6
+
 ## First Run
 
 ![FEDEM](images/logo.png){: align="right" style="height:40px;width:40px"}
 To start FEDEM with an empty model, either double-click the FEDEM icon on the Desktop,
-or select in from the Windows Start menu. The welcome screen of the FEDEM GUI
-should then (after a few seconds) appear, like this:
+or select in from the Windows Start menu. On Linux, execute the launcher script
+`/usr/local/Fedem-8.0.1/fedem`.
+
+The welcome screen of the FEDEM GUI should then (after a few seconds) appear, like this:
 
 ![Welcome to FEDEM](images/FedemWelcome.png)
 
@@ -56,7 +74,7 @@ The FEDEM main windows consists of the following items:
   which provides information of the status, progress information
   and whether a solver process is running.
 
-Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.0.9/FedemUsersGuide.pdf)
+Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.1.0/FedemUsersGuide.pdf)
 for further details on the FEDEM GUI.
 
 If you already have a FEDEM model file, the easiest way to open it is to just double-click the file in the Windows file browser.
