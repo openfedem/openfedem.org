@@ -12,8 +12,8 @@ nav:
     - Development Setup: development_setup.md
     - Python API (fedempy): python_api.md
   - Download:
-    - Windows installer (zip): https://github.com/openfedem/fedem-gui/releases/download/fedem-8.1.0/FedemInstaller-R8.1.0.zip
-    - Linux installation (tar.gz): https://github.com/openfedem/fedem-gui/releases/download/fedem-8.1.0/Fedem-R8.1.0_Ubuntu-22.04.tar.gz
+    - Windows installer (zip): https://github.com/openfedem/fedem-gui/releases/download/fedem-8.1.0.8/FedemInstaller-R8.1.0.8.zip
+    - Linux installation (tar.gz): https://github.com/openfedem/fedem-gui/releases/download/fedem-8.1.0.8/Fedem-R8.1.0.8_Ubuntu-22.04.tar.gz
     - Linux solvers (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.1.0/fedem-solvers-4.0.2_linux64.tar.gz
     - fedempy package (tar.gz): https://github.com/openfedem/fedem-solvers/releases/download/fedem-8.1.0/fedempy-4.0.2.tar.gz
   - Documentation:
