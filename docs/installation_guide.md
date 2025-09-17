@@ -45,9 +45,10 @@ Then, install the required Qt6 packages:
 ## First Run
 
 ![FEDEM](images/logo.png){: align="right" style="height:40px;width:40px"}
-To start FEDEM with an empty model, either double-click the FEDEM icon on the Desktop,
-or select in from the Windows Start menu. On Linux, execute the launcher script
-`/usr/local/Fedem-8.0.1/fedem`.
+To start FEDEM with an empty model,
+either double-click the FEDEM icon on the Desktop,
+or select it from the Windows Start menu.
+On Linux, execute the launcher script `/usr/local/Fedem-8.0.1/fedem`.
 
 The welcome screen of the FEDEM GUI should then (after a few seconds) appear, like this:
 
