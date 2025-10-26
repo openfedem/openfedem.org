@@ -26,14 +26,14 @@ nav:
   - Discussions: discussions.md
   - Issues (Bugs): issues.md
   - Examples:
-    - Introduction: examples/0_introduction.md
-    - The Loader: examples/A_loader.md
+    - Introduction: examples/introduction.md
+    - The Loader: examples/loader.md
       #- Simple: examples/A_simple.md
       #- Advanced: examples/B_advanced.md
       #- Model imports: examples/C_imports.md
       #- Industrial applications: examples/D_industrial_applications.md
       #- Simulators: examples/E_simulators.md
-      #- Digital Twins: examples/F_digital_twins.md
+    - Digital Twins: examples/digital_twins.md
       #- Benchmarks: examples/G_case_studies.md
       #- Physics cases: examples/H_physics.md
       #- API: examples/I_api.md
