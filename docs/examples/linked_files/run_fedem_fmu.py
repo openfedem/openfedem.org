@@ -40,8 +40,10 @@ def run(fmu_file, input_file=None, instance_name="my instance"):
     num_output = num_params[1] # Number of output sensors
 
     # Read the input values into a Dataframe
-    if num_inputs > 0 and input_file is not None:
-        inputs = read_csv(input_file, sep="\t")
+    if input_file is None:
+        inputs = None
+    elif num_inputs > 0:
+        inputs = read_csv(input_file, sep=",")
 
     # List of external function indices
     inpIdx = range(num_inputs)
@@ -49,18 +51,21 @@ def run(fmu_file, input_file=None, instance_name="my instance"):
     outIdx = range(num_inputs,num_inputs+num_output)
 
     # Time loop, this will run through the FEDEM simulation
-    # using the time domain setup in the model file used to export the FMU.
+    # using the time domain setup of the model file used to export the FMU.
     # The two parameters to the doStep() call are dummies (time and step size).
     # They are not used in the FMU so the values are arbitrary (2*0.0 is fine).
-    istep = 0
+    step = 0
     while not fmu.getBooleanStatus(fmi2.fmi2Terminated):
-        if num_inputs > 0:  # Set the external function values for this step
-            fmu.setReal([*inpIdx], inputs.iloc[istep])
-        fmu.doStep(0.0, 0.0)
+        if inputs is not None:  # Set external function values for next step
+            # First column of inputs is not used, assuming it contains the time
+            fmu.setReal([*inpIdx], inputs.iloc[step].tolist()[1:])
+
+        fmu.doStep(0.0, 0.0)  # Advance the simulation on step
+
+        step += 1
         time = fmu.getRealStatus(fmi2.fmi2LastSuccessfulTime)
         output = fmu.getReal([*outIdx])
-        istep += 1
-        print(f"Here are the outputs at step={istep} time={time}:", output)
+        print(f"Here are the outputs at step={step} time={time}:", output)
 
     # Finished, close down
     fmu.terminate()
