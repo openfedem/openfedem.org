@@ -23,13 +23,13 @@ if not path.isdir(model_file.parent):
     mkdir(model_file.parent)
 
 # Create a new FEDEM model
-my_model = FedemModeler(str(model_file), force_new=True)
+my_model = FedemModeler(str(model_file), True,
+                        name="Short- and long-arm car front suspension")
 
 # Load the FE parts
 lca     = my_model.make_fe_part(PARTS_PATH + 'lca.nas')
 knuckle = my_model.make_fe_part(PARTS_PATH + 'knuckle.nas')
 uca     = my_model.make_fe_part(PARTS_PATH + 'uca.nas')
-ground  = 2  # base id of the reference plane will always be 2
 
 # Lower control arm joints to ground
 j1 = my_model.make_joint('Fix 1', FmType.BALL_JOINT,
@@ -57,20 +57,23 @@ j6 = my_model.make_joint('Fix 4', FmType.BALL_JOINT,
 t0 = my_model.make_triad('Steering pin', node=2, on_part=knuckle)
 my_model.edit_triad(t0, constraints={'Tx' : FmDofStat.FIXED})
 
-# Damper
-t1 = my_model.make_triad('Damper pin', node=11909, on_part=lca)
-t2 = my_model.make_triad('Damper ground', pos=(0.0, 0.0, 0.3), on_part=ground)
-s1 = my_model.make_spring('Damper', (t1, t2), init_Stiff_Coeff=7.5e6)
+# Spring/Damper triads
+t1 = my_model.make_triad('Damper connection', node=11909, on_part=lca)
+t2 = my_model.make_triad('Ground', pos=(0.0, 0.0, 0.3),
+                         on_part=my_model.fm_get_refplane())
+
+# Spring/Damper
+s1 = my_model.make_spring('Spring', (t1, t2), init_Stiff_Coeff=7.5e6)
 d1 = my_model.make_damper('Damper', (t1, t2), init_Damp_Coeff=3.0e3)
 
-# Wheel hub triad with external force
+# Wheel hub triad with external vertical force
 t3 = my_model.make_triad('Wheel hub', node=1, on_part=knuckle)
-my_model.edit_triad(t3, load={'Tz' : my_model.make_function('Wheel force')})
+my_model.edit_triad(t3, load={'Tz' : my_model.make_function('Wheel force', tag='Wheel_Fz')})
 
 # Ouput sensors
-o1 = my_model.make_sensor('Damper force', (s1, d1), FmVar.FORCE)
-o2 = my_model.make_sensor('Damper deflection', s1, FmVar.DEFLECTION)
-o3 = my_model.make_sensor('Steering pin deflection', t0, FmVar.POS, FmDof.TZ)
+my_model.make_sensor('Damper force', (s1, d1), FmVar.FORCE, tag='damper_force')
+my_model.make_sensor('Damper deformation', s1, FmVar.DEFLECTION, tag='damper_deformation')
+my_model.make_sensor('Steering pin deflection', t0, FmVar.POS, FmDof.TZ, 'pin_deflection')
 
 my_model.fm_solver_setup(t_inc=0.005, t_end=2.5, t_quasi=-1.0)
 my_model.fm_solver_tol(1.0e-6,1.0e-6,1.0e-6)
