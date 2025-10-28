@@ -32,11 +32,14 @@ loop of the numerical simulation.
 
 In this model we want to monitor the force and deflection in the damper,
 in addition to the vertical deflection of the steering pin Triad.
-For this purpose, three other Function objects are defined simply as 1-to-1
-functions, where the respective response quantities are defined as arguments.
-These three functions (marked with the "**S**" icon in the Objects three) then
-serve as virtual sensors which can be evaluated by the calling process during
-the time step loop.
+Since the damper is composed of two structural elements between the end triads,
+we define a *Math expression* Function object summing the Force of the Axial
+spring and the Axial damper. This function is then marked as Output sensor
+(the "**S**" icon in the Objects three). In addition, two other Function
+objects are defined simply as 1-to-1 functions, where the respective response
+quantities (the damper deformation and the Z-position of the pin Triad)
+are defined as arguments. These three functions will then serve as virtual
+sensors that can be evaluated by the calling process during the time step loop.
 
 ## Creating the digital twin using fedempy
 
@@ -63,13 +66,13 @@ if not path.isdir(model_file.parent):
     mkdir(model_file.parent)
 
 # Create a new FEDEM model
-my_model = FedemModeler(str(model_file), force_new=True)
+my_model = FedemModeler(str(model_file), True,
+                        name="Short- and long-arm car front suspension")
 
 # Load the FE parts
 lca     = my_model.make_fe_part(PARTS_PATH + 'lca.nas')
 knuckle = my_model.make_fe_part(PARTS_PATH + 'knuckle.nas')
 uca     = my_model.make_fe_part(PARTS_PATH + 'uca.nas')
-ground  = 2  # base id of the reference plane will always be 2
 
 # Lower control arm joints to ground
 j1 = my_model.make_joint('Fix 1', FmType.BALL_JOINT,
@@ -97,20 +100,23 @@ j6 = my_model.make_joint('Fix 4', FmType.BALL_JOINT,
 t0 = my_model.make_triad('Steering pin', node=2, on_part=knuckle)
 my_model.edit_triad(t0, constraints={'Tx' : FmDofStat.FIXED})
 
-# Damper
-t1 = my_model.make_triad('Damper pin', node=11909, on_part=lca)
-t2 = my_model.make_triad('Damper ground', pos=(0.0, 0.0, 0.3), on_part=ground)
-s1 = my_model.make_spring('Damper', (t1, t2), init_Stiff_Coeff=7.5e6)
+# Spring/Damper triads
+t1 = my_model.make_triad('Damper connection', node=11909, on_part=lca)
+t2 = my_model.make_triad('Ground', pos=(0.0, 0.0, 0.3),
+                         on_part=my_model.fm_get_refplane())
+
+# Spring/Damper
+s1 = my_model.make_spring('Spring', (t1, t2), init_Stiff_Coeff=7.5e6)
 d1 = my_model.make_damper('Damper', (t1, t2), init_Damp_Coeff=3.0e3)
 
-# Wheel hub triad with external force
+# Wheel hub triad with external vertical force
 t3 = my_model.make_triad('Wheel hub', node=1, on_part=knuckle)
-my_model.edit_triad(t3, load={'Tz' : my_model.make_function('Wheel force')})
+my_model.edit_triad(t3, load={'Tz' : my_model.make_function('Wheel force', tag='Wheel_Fz')})
 
 # Ouput sensors
-o1 = my_model.make_sensor('Damper force', (s1, d1), FmVar.FORCE)
-o2 = my_model.make_sensor('Damper deflection', s1, FmVar.DEFLECTION)
-o3 = my_model.make_sensor('Steering pin deflection', t0, FmVar.POS, FmDof.TZ)
+my_model.make_sensor('Damper force', (s1, d1), FmVar.FORCE, tag='damper_force')
+my_model.make_sensor('Damper deformation', s1, FmVar.DEFLECTION, tag='damper_deformation')
+my_model.make_sensor('Steering pin deflection', t0, FmVar.POS, FmDof.TZ, tag='pin_deflection')
 
 my_model.fm_solver_setup(t_inc=0.005, t_end=2.5, t_quasi=-1.0)
 my_model.fm_solver_tol(1.0e-6,1.0e-6,1.0e-6)
@@ -123,7 +129,7 @@ Before the model can be exported, the FE models need to be reduced into
 superelements since the FMU will only conduct the dynamics simulation
 of the mechanism model. This can be done with `fedempy` using:
 
-    $ python -m fedempy.fmm_solver -f 02-sla-dtwin.fmm --reduce-only --save-model
+    $ python -m fedempy.fmm_solver -f 02-sla-dtwin.fmm --reduce-only
 
 Alternatively, you can open the generated model in the FEDEM GUI and perform the
 model reduction there.
@@ -138,10 +144,13 @@ This dialog box shows three alternative ways of exporting the model,
 but only the **FMU** option is relevant here. So enable that toggle.
 Then use the **Browse...** button to selected the name for the fmu-file.
 In the right side of the dialog, you find a list of the input- and output
-indicators in the model, corresponding to the external functions and output
-sensors defined in the modelling script.
+indicators in the model, corresponding to the external functions
+and output sensors defined in the modelling script.
+Notice in particular the *Name* column. The strings here will be
+used to identify the input and outputs in the exported FMU.
+They are defined using the *tag* keyword in the modelling script
 
-Press the **Export** button to generate the fmu, and thenexit the FEDEM GUI.
+Press the **Export** button to generate the FMU, and then exit the FEDEM GUI.
 
 ## Testing the FMU
 
@@ -150,9 +159,74 @@ To verify that the created FMU works, you can use a tool such as
 you can controll the simulation. It is also convenient to make a python script
 to run it from console or to integrate with a larger simulation environment.
 
-We here present a simple python driver, which just runs though the simulation
-as it is set up in the model. The script takes the input for each time step
-from a specified input file, and prints the output sensor values to the console.
+First, you can use the web-based static checker
+[FMU Check](https://fmu-check.herokuapp.com/) to validate the FMU before doing
+any simulation attempt. For the FMU of this example
+(named [sla-dtwin.fmu](linked_files/sla-dtwin.fmu)), it will produce the following:
+
+![FMU Check](../images/sla-fmu-checked.png)
+
+If you have installed the FMPy module, you may also use its CLI to check it.
+From a console window, run the command `$ fmpy info sla-dtwin.fmu`:
+
+    $ fmpy info sla-dtwin.fmu
+
+    Model Info
+
+      FMI Version        2.0
+      FMI Type           Co-Simulation
+      Model Name         02-sla-dtwin
+      Description        Short- and long-arm car front suspension
+      Platforms          linux64, win64
+      Continuous States  0
+      Event Indicators   0
+      Variables          4
+      Generation Tool    FEDEM FMU Exporter
+      Generation Date    2025-10-28T20:09:21
+
+
+    Variables (input, output)
+
+      Name               Causality              Start Value  Unit     Description
+      Wheel_Fz           input                          0.0           Wheel force
+      damper_force       output                                       Damper force
+      damper_deformation output                                       Damper deformation
+      pin_deflection     output                                       Steering pin deflection
+
+With this looking good, the next step is to try to run the FMU.
+Since it has one input variable, a file containing some time history of
+this quantity is needed. For this test, please use the file
+[sla_input.csv](linked_files/sla_input.csv). The first line of the input file
+needs to contain the name(s) of the input variable(s) as column headers.
+Otherwise it will fail, even if only one input variable is present.
+
+*Note:* A FEDEM FMU only contains the simulation data model in addition to
+the FMU configuration files, but not the FEDEM solver itself. The FMU assumes
+that a working FEDEM installation exist on the host running it, and the solver
+is accessed via an environment variable:
+
+    FEDEM_SOLVER = full path to fedem_solver_core.dll or libfedem_solver_core.so
+
+This environment variable needs to be defined in the shell running the FMU.
+You can fetch the necessary binaries from the
+[fedem-solvers](https://github.com/openfedem/fedem-solvers/releases)
+repository on github. You may also use the solvers embedded with the
+full FEDEM GUI installation.
+
+Using the FMPy GUI (`$ python -m fmpy.gui`), select the *sla-dtwin.fmu* file
+exported from the FEDEM FMU exporter, and then select *sla_input.csv* as the
+input file:
+
+![FMU settings](../images/sla-fmpy-setup.png)
+
+Then run the simulation to produce the results:
+
+![FMU results](../images/sla-fmpy-results.png)
+
+Below we present a simple python driver, which will run though the simulation
+as it is set up in the model in the same way as the FMPy GUI above will do.
+The script takes the input for each time step from a specified input file,
+and prints the output sensor values to the console.
 Use this as a template for more advanced co-simulation tasks with FEDEM FMUs.
 
 [Download...](linked_files/run_fedem_fmu.py)
@@ -190,7 +264,9 @@ def run(fmu_file, input_file=None, instance_name="my instance"):
     num_output = num_params[1] # Number of output sensors
 
     # Read the input values into a Dataframe
-    if num_inputs > 0 and input_file is not None:
+    if input_file is None:
+        inputs = None
+    elif num_inputs > 0:
         inputs = read_csv(input_file, sep="\t")
 
     # List of external function indices
@@ -199,18 +275,21 @@ def run(fmu_file, input_file=None, instance_name="my instance"):
     outIdx = range(num_inputs,num_inputs+num_output)
 
     # Time loop, this will run through the FEDEM simulation
-    # using the time domain setup in the model file used to export the FMU.
+    # using the time domain setup of the model file used to export the FMU.
     # The two parameters to the doStep() call are dummies (time and step size).
     # They are not used in the FMU so the values are arbitrary (2*0.0 is fine).
-    istep = 0
+    step = 0
     while not fmu.getBooleanStatus(fmi2.fmi2Terminated):
-        if num_inputs > 0:  # Set the external function values for this step
-            fmu.setReal([*inpIdx], inputs.iloc[istep])
-        fmu.doStep(0.0, 0.0)
+        if inputs is not None:  # Set external function values for next step
+            # First column of inputs is not used, assuming it contains the time
+            fmu.setReal([*inpIdx], inputs.iloc[step].tolist()[1:])
+
+        fmu.doStep(0.0, 0.0)  # Advance the simulation on step
+
+        step += 1
         time = fmu.getRealStatus(fmi2.fmi2LastSuccessfulTime)
         output = fmu.getReal([*outIdx])
-        istep += 1
-        print(f"Here are the outputs at step={istep} time={time}:", output)
+        print(f"Here are the outputs at step={step} time={time}:", output)
 
     # Finished, close down
     fmu.terminate()
