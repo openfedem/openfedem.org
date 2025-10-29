@@ -30,6 +30,9 @@ my_model = FedemModeler(str(model_file), True,
 lca     = my_model.make_fe_part(PARTS_PATH + 'lca.nas')
 knuckle = my_model.make_fe_part(PARTS_PATH + 'knuckle.nas')
 uca     = my_model.make_fe_part(PARTS_PATH + 'uca.nas')
+if any(p < 0 for p in [lca, knuckle, uca]):
+    print("Loading FE parts failed")
+    exit(1)
 
 # Lower control arm joints to ground
 j1 = my_model.make_joint('Fix 1', FmType.BALL_JOINT,

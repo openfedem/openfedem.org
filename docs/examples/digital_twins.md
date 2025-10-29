@@ -116,7 +116,7 @@ my_model.edit_triad(t3, load={'Tz' : my_model.make_function('Wheel force', tag='
 # Ouput sensors
 my_model.make_sensor('Damper force', (s1, d1), FmVar.FORCE, tag='damper_force')
 my_model.make_sensor('Damper deformation', s1, FmVar.DEFLECTION, tag='damper_deformation')
-my_model.make_sensor('Steering pin deflection', t0, FmVar.POS, FmDof.TZ, tag='pin_deflection')
+my_model.make_sensor('Steering pin deflection', t0, FmVar.POS, FmDof.TZ, 'pin_deflection')
 
 my_model.fm_solver_setup(t_inc=0.005, t_end=2.5, t_quasi=-1.0)
 my_model.fm_solver_tol(1.0e-6,1.0e-6,1.0e-6)
@@ -142,7 +142,7 @@ You find this in the *File* menu (*File --> Export --> Export Digital Twin...*).
 
 This dialog box shows three alternative ways of exporting the model,
 but only the **FMU** option is relevant here. So enable that toggle.
-Then use the **Browse...** button to selected the name for the fmu-file.
+Then use the **Browse...** button to select the name for the fmu-file.
 In the right side of the dialog, you find a list of the input- and output
 indicators in the model, corresponding to the external functions
 and output sensors defined in the modelling script.
@@ -232,9 +232,10 @@ Use this as a template for more advanced co-simulation tasks with FEDEM FMUs.
 [Download...](linked_files/run_fedem_fmu.py)
 
 ```python
-from fmpy import fmi2, read_model_description, extract
-from pandas import read_csv
 from sys import argv
+from os import path
+from pandas import read_csv
+from fmpy import fmi2, read_model_description, extract
 
 
 def run(fmu_file, input_file=None, instance_name="my instance"):
@@ -248,6 +249,11 @@ def run(fmu_file, input_file=None, instance_name="my instance"):
     # Extract the FMU itself
     print("Extracting", fmu_file, "...")
     unzipdir = extract(fmu_file)
+
+    # Get absolute path of input_file because the fmu.instantiate() call
+    # will change the working directory
+    if input_file is not None:
+        input_file = path.abspath(input_file)
 
     # Setup the FMU
     print("Setup the FMU", model.coSimulation.modelIdentifier)
@@ -263,16 +269,15 @@ def run(fmu_file, input_file=None, instance_name="my instance"):
     num_inputs = num_params[0] # Number of input sensors
     num_output = num_params[1] # Number of output sensors
 
-    # Read the input values into a Dataframe
-    if input_file is None:
-        inputs = None
-    elif num_inputs > 0:
-        inputs = read_csv(input_file, sep="\t")
+    if input_file is None or num_inputs < 1:
+        inputs = None  # All inputs are assumed defined internally in the model
+    else:  # Read the input values into a Dataframe
+        inputs = read_csv(input_file, sep=",")
 
     # List of external function indices
-    inpIdx = range(num_inputs)
+    inp_idx = range(num_inputs)
     # List of output sensor indices
-    outIdx = range(num_inputs,num_inputs+num_output)
+    out_idx = range(num_inputs, num_inputs+num_output)
 
     # Time loop, this will run through the FEDEM simulation
     # using the time domain setup of the model file used to export the FMU.
@@ -282,13 +287,13 @@ def run(fmu_file, input_file=None, instance_name="my instance"):
     while not fmu.getBooleanStatus(fmi2.fmi2Terminated):
         if inputs is not None:  # Set external function values for next step
             # First column of inputs is not used, assuming it contains the time
-            fmu.setReal([*inpIdx], inputs.iloc[step].tolist()[1:])
+            fmu.setReal([*inp_idx], inputs.iloc[step].tolist()[1:])
 
         fmu.doStep(0.0, 0.0)  # Advance the simulation on step
 
         step += 1
         time = fmu.getRealStatus(fmi2.fmi2LastSuccessfulTime)
-        output = fmu.getReal([*outIdx])
+        output = fmu.getReal([*out_idx])
         print(f"Here are the outputs at step={step} time={time}:", output)
 
     # Finished, close down

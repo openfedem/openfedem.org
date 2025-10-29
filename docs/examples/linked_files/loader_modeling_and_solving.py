@@ -37,6 +37,9 @@ my_model = FedemModeler(str(model_file), force_new=True)
 
 # Load the FE parts
 parts = [my_model.make_fe_part(f) for f in FILES]
+if any(p < 0 for p in parts):
+    print("Failed to load FE parts")
+    exit(1)
 
 # Edit some part properties
 my_model.edit_part(parts, alpha2=0.00286, component_modes=0, consistent_mass=True)
@@ -130,7 +133,8 @@ my_model.edit_joint(j01,
                     constraints={'Rz' : FmDofStat.SPRING},
                     spring={'Rz' : 1.0e9},
                     length={'Rz' : f3})
-[my_model.edit_joint(j, Rx=90) for j in [j03, j04, j05, j06, j07, j08, j09, j10]]
+for j in [j03, j04, j05, j06, j07, j08, j09, j10]:
+    my_model.edit_joint(j, Rx=90)
 
 my_model.fm_solver_setup(t_inc=0.01, t_end=1.6)
 my_model.close(True, True)
