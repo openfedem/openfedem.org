@@ -5,15 +5,15 @@ the latest built release, and run some of the example models provided.
 
 ## Installation
 
-64-bit binaries are now provided for both Windows and Linux (Ubuntu 22.04).
+64-bit binaries are provided for Windows and Linux (Ubuntu 22.04) platform.
 To install the latest Windows release, proceed as follows:
 
-* Go to the [Releases](https://github.com/openfedem/fedem-gui/releases) page
-  on the [fedem-gui](https://github.com/openfedem/fedem-gui) repository on github,
-  and download the most recent zip-file `FedemInstaller-*.zip`.
-* Alternatively, you may download the latest Windows installer
-  from the **Download** menu in the left pane.
-* Unzip this file at arbitrary location on your PC.
+* Go to the **Download** menu in the left pane and choose **Windows installer (zip)**.
+  This will download a zip-file `FedemInstaller-*.zip` with the latest installation.
+  You may also go to the [Releases](https://github.com/openfedem/fedem-gui/releases)
+  page of the [fedem-gui](https://github.com/openfedem/fedem-gui) repository
+  on github if you need to download some of the earlier releases.
+* Unzip the downloaded file at arbitrary location on your PC.
 * Execute the `INSTALL.bat` file as administrator.
   This will (by default) install the software in the folder "C:\Program Files\FEDEM"
   on your PC, set the file association for FEDEM model files to the GUI executable
@@ -26,12 +26,12 @@ To install the latest Windows release, proceed as follows:
   That is, download the file [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
   and execute it as administrator.
 
-To install the latest Linux release,
-download the most recent `Fedem-*_Ubuntu-22.04.tar.gz` file
-from the [Releases](https://github.com/openfedem/fedem-gui/releases) page
-(it is also available from the  **Download** menu in the left pane).
+To install the latest Linux release, choose **Linux installation (tar.gz)**
+from the **Downlad** menu in the left pane. This will download a compressed tar-file
+`Fedem-*_Ubuntu-22.04.tar.gz` with the latest Linux installation. You will also find this
+ and earlier versions on the [Releases](https://github.com/openfedem/fedem-gui/releases) page.
 
-Unpack this file in the location where you want to have Fedem installed, e.g.:
+Unpack the downloaded file in the location where you want to have Fedem installed, e.g.:
 
     $ cd /usr/local
     $ sudo tar zxfv ~/Downloads/Fedem-R8.1.1_Ubuntu-22.04.tar.gz
