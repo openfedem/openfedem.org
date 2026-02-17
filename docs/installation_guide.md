@@ -34,9 +34,9 @@ from the **Downlad** menu in the left pane. This will download a compressed tar-
 Unpack the downloaded file in the location where you want to have Fedem installed, e.g.:
 
     $ cd /usr/local
-    $ sudo tar zxfv ~/Downloads/Fedem-R8.1.1_Ubuntu-22.04.tar.gz
+    $ sudo tar zxfv ~/Downloads/Fedem-R8.1.4_Ubuntu-22.04.tar.gz
 
-This will install Fedem R8.1.1 in the folder `/usr/local/Fedem-8.1.1`.
+This will install Fedem R8.1.4 in the folder `/usr/local/Fedem-8.1.4`.
 
 Then, install the required Qt6 packages:
 
@@ -48,7 +48,7 @@ Then, install the required Qt6 packages:
 To start FEDEM with an empty model,
 either double-click the FEDEM icon on the Desktop,
 or select it from the Windows Start menu.
-On Linux, execute the launcher script `/usr/local/Fedem-8.1.1/fedem`.
+On Linux, execute the launcher script `/usr/local/Fedem-8.1.4/fedem`.
 
 The welcome screen of the FEDEM GUI should then (after a few seconds) appear, like this:
 
@@ -75,7 +75,7 @@ The FEDEM main windows consists of the following items:
   which provides information of the status, progress information
   and whether a solver process is running.
 
-Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.1.1/FedemUsersGuide.pdf)
+Refer to the [Users Guide](https://github.com/openfedem/fedem-docs/releases/download/fedem-8.1.4/FedemUsersGuide.pdf)
 for further details on the FEDEM GUI.
 
 If you already have a FEDEM model file, the easiest way to open it is to just double-click the file in the Windows file browser.
