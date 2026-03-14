@@ -8,13 +8,14 @@ the latest built release, and run some of the example models provided.
 64-bit binaries are provided for Windows and Linux (Ubuntu 22.04) platform.
 To install the latest Windows release, proceed as follows:
 
-* Go to the **Download** menu in the left pane and choose **Windows installer (zip)**.
-  This will download a zip-file `FedemInstaller-*.zip` with the latest installation.
+* Go to the **Download** menu in the left pane and choose **Windows installer (msi)**.
+  This will download a msi-file `Fedem-*.msi` with can be executed to install FEDEM on your PC.
   You may also go to the [Releases](https://github.com/openfedem/fedem-gui/releases)
   page of the [fedem-gui](https://github.com/openfedem/fedem-gui) repository
   on github if you need to download some of the earlier releases.
-* Unzip the downloaded file at arbitrary location on your PC.
-* Execute the `INSTALL.bat` file as administrator.
+* Alternatively, you can download a zip-file `FedemInstaller-*.zip` with the latest installation.
+  Unzip the downloaded file at arbitrary location on your PC,
+  and execute the `INSTALL.bat` file as administrator.
   This will (by default) install the software in the folder "C:\Program Files\FEDEM"
   on your PC, set the file association for FEDEM model files to the GUI executable
   (`Fedem.exe`), and optionally create short-cuts to the executable on the user's Desktop
